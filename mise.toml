@@ -1,0 +1,28 @@
+[tools]
+rust = "1.94.0"
+
+[settings]
+lockfile = true
+
+[env]
+_.path = ["./node_modules/.bin"]
+
+[tasks.build]
+description = "Build the WASM extension"
+run = "cargo build --target wasm32-wasip1"
+
+[tasks.check]
+description = "Check the project compiles"
+run = "cargo check"
+
+[tasks.lint]
+description = "Lint with clippy"
+run = "cargo clippy -- -D warnings"
+
+[tasks.fmt]
+description = "Format Rust code"
+run = "cargo fmt"
+
+[tasks.clean]
+description = "Clean build artifacts"
+run = "cargo clean"
