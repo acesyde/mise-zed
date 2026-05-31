@@ -8,7 +8,7 @@ lockfile = true
 
 [tasks.build]
 description = "Build the WASM extension"
-run = "cargo build --target wasm32-wasip1"
+run = "cargo build --target wasm32-wasip2"
 
 [tasks.check]
 description = "Check the project compiles"

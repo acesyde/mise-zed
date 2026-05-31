@@ -1,21 +1,12 @@
-[id]
+id = "mise"
 name = "mise"
 version = "0.1.0"
+schema_version = 1
 authors = ["You"]
 description = "mise support for Zed (dev-tools, tasks, and environment variables)"
 
-[language_servers.mise]
-name = "Mise Language Server"
-language = "toml"
+[lib]
+kind = "Rust"
+version = "0.7.0"
 
-[context_servers.mise]
-name = "Mise Context Server"
-
-[grammars]
-toml = "./grammars/toml"
-mise_shell = "./grammars/mise_shell"
-usage_kdl = "./grammars/usage_kdl"
-
-[snippets]
-toml_tasks = "./snippets/toml-tasks"
-shell_tasks = "./snippets/shell-tasks"
+snippets = ["./snippets/toml-tasks", "./snippets/shell-tasks"]

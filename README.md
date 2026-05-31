@@ -12,22 +12,6 @@ This extension is heavily inspired by the excellent [mise-vscode](https://github
 
 ## Features
 
-Four slash commands in Zed:
-
-| Command   | Description                                                            |
-| --------- | ---------------------------------------------------------------------- |
-| `/tools`  | List installed `mise` tools (equivalent to `mise ls --offline --json`) |
-| `/tasks`  | List available `mise` tasks (equivalent to `mise tasks ls --json`)     |
-| `/env`    | Show `mise` environment variables (equivalent to `mise env --json`)    |
-| `/doctor` | Run `mise doctor` diagnostics                                          |
-
-### TextMate Grammars
-
-- **TOML** — syntax highlighting for `mise.toml` files
-- **mise_shell** — highlighting for shell task files (`mise tasks`)
-- **usage_kdl** — highlighting for Usage KDL config files
-- **tera-mise** — highlighting for Tera templates inside mise strings
-
 ### Snippets
 
 - **TOML tasks** (`snippets/toml-tasks.json`) — snippets for creating tasks in `mise.toml`

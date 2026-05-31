@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - **Rust** 1.94.0 (managed via `mise` — see `mise.toml`)
-- **wasm32-wasip1 target**: `rustup target add wasm32-wasip1`
+- **wasm32-wasip2 target**: `rustup target add wasm32-wasip2`
 - **mise** CLI: https://mise.jdx.dev
 - **Zed** editor (for local extension testing)
 
@@ -19,7 +19,7 @@ All tasks are in `mise.toml`. Run them with `mise run <task>`:
 
 | Command          | Description                                                 |
 | ---------------- | ----------------------------------------------------------- |
-| `mise run build` | Build WASM extension (`cargo build --target wasm32-wasip1`) |
+| `mise run build` | Build WASM extension (`cargo build --target wasm32-wasip2`) |
 | `mise run check` | Check compilation                                           |
 | `mise run lint`  | Clippy with `-D warnings`                                   |
 | `mise run fmt`   | Format Rust code                                            |
@@ -34,11 +34,9 @@ All tasks are in `mise.toml`. Run them with `mise run <task>`:
 
 ## Testing the Extension Locally
 
-1. Build: `mise run build`
-2. Copy `target/wasm32-wasip1/debug/mise.wasm` to Zed's extension dir
-3. In Zed, open the Extensions view and enable `mise`
-
-Alternatively, symlink the project into `~/.local/share/zed/extensions/`.
+1. `mise run build` — builds the WASM extension
+2. In Zed, open Extensions (`cmd+shift+X`) → **Install Dev Extension** → select the project directory
+3. The extension appears with a "Dev" badge
 
 ## Guidelines
 
