@@ -2,6 +2,7 @@
 	"comments": {
 		"lineComment": "#"
 	},
+	"autoCloseBefore": ".,=}] \n\t",
 	"brackets": [["[", "]"], ["{", "}"]],
 	"autoClosingPairs": [
 		{
@@ -29,5 +30,14 @@
 			"start": "^\\s*// region:\\b",
 			"end": "^\\s*// endregion\\b"
 		}
-	}
+	},
+	"onEnterRules": [
+		{
+			"beforeText": "^\\s*#.*$",
+			"action": {
+				"indent": "none",
+				"appendText": "# "
+			}
+		}
+	]
 }
