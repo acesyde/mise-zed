@@ -1,11 +1,10 @@
 [tools]
+hk = "1.46.0"
+pkl = "0.31.1"
 rust = "1.94.0"
 
 [settings]
 lockfile = true
-
-[env]
-_.path = ["./node_modules/.bin"]
 
 [tasks.build]
 description = "Build the WASM extension"

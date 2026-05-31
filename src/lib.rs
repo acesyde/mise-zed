@@ -1,5 +1,7 @@
 use std::fmt::Write;
-use zed_extension_api::{self as zed, Result, SlashCommand, SlashCommandArgumentCompletion, SlashCommandOutput, Worktree};
+use zed_extension_api::{
+    self as zed, Result, SlashCommand, SlashCommandArgumentCompletion, SlashCommandOutput, Worktree,
+};
 
 struct MiseExtension;
 
@@ -66,11 +68,7 @@ impl MiseExtension {
         Err("mise binary not found in PATH. Install it from https://mise.jdx.dev".to_string())
     }
 
-    fn run_mise(
-        &self,
-        args: &[&str],
-        worktree: Option<&Worktree>,
-    ) -> Result<String, String> {
+    fn run_mise(&self, args: &[&str], worktree: Option<&Worktree>) -> Result<String, String> {
         let mise_path = self.find_mise(worktree)?;
         let output = zed::process::Command::new(mise_path)
             .args(args.iter().map(|s| s.to_string()))
